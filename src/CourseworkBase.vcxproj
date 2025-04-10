@@ -100,6 +100,7 @@
     <ClInclude Include="ImageMappingDemo.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="MyEngine.h" />
+    <ClInclude Include="SaveState.h" />
     <ClInclude Include="Scyxd6Object.h" />
     <ClInclude Include="Scyxd6TileManager.h" />
     <ClInclude Include="SimpleFlashingDragableImageObject.h" />
@@ -144,6 +145,7 @@
     <ClCompile Include="DisplayableObject.cpp" />
     <ClCompile Include="FontManager.cpp" />
     <ClCompile Include="MyEngine.cpp" />
+    <ClCompile Include="SaveState.cpp" />
     <ClCompile Include="Scyxd6Object.cpp" />
     <ClCompile Include="Scyxd6TileManager.cpp" />
     <ClCompile Include="SimpleImage.cpp" />

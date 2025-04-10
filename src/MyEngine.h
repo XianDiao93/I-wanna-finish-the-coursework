@@ -20,6 +20,7 @@ protected:
 
 private:
     GameState* currentState;
+    bool changingState = false;
 
 public:
     void virtSetupBackgroundBuffer() override;

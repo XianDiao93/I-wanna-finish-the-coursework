@@ -6,6 +6,7 @@
 #include "AutomatedObject.h"
 #include "UtilCollisionDetection.h"
 #include "StartState.h"
+#include "SaveState.h"
 
 void MyEngine::virtSetupBackgroundBuffer()
 {
@@ -110,15 +111,22 @@ int MyEngine::virtInitialise()
 
 void MyEngine::virtMainLoopDoBeforeUpdate()
 {
-    if(currentState)
+    if(currentState && !changingState)
         currentState->virtUpdateBackground(getModifiedTime());
 }
 
 void MyEngine::changeState(int code)
 {
-    //switch (code)
-    //{
-    //case 1:
-    //    currentState = new SaveState(this);
-    //}
+    changingState = true;
+    switch (code)
+    {
+    case 1:
+        currentState = new SaveState(this, getWindowWidth(), getWindowHeight());
+        break;
+    }
+
+    m_pBackgroundSurface->mySDLLockSurface();
+    virtSetupBackgroundBuffer();
+    m_pBackgroundSurface->mySDLUnlockSurface();
+    changingState = false;
 }

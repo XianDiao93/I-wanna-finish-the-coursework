@@ -134,7 +134,7 @@ void StartState::virtUpdateBackground(int iCurrent)
             Font* CR3 = engine->fontManager.getFont("Cornerstone Regular.ttf", 30);
             engine->drawBackgroundString(80, 150, "I wanna", 0xffffff, CR12);
             engine->drawBackgroundString(80, 260, "finish the coursework", 0xaaaaaa, CR6);
-            engine->drawBackgroundString(80, 560, "Press left shift to continue", 0xdddddd, CR3);
+            engine->drawBackgroundString(80, 560, "Press space to continue", 0xdddddd, CR3);
             engine->drawBackgroundString(80, 610, "Press esc to quit", 0xeeeeee, CR3);
             engine->getBackgroundSurface()->mySDLUnlockSurface();
 
@@ -160,11 +160,14 @@ void StartState::virtDrawImage(SimpleImage image, int iX, int iY)
     );
     engine->getBackgroundSurface()->mySDLUnlockSurface();
 }
+
 void StartState::virtKeyDown(int iKeyCode)
 {
     switch (iKeyCode)
     {
     case '\033':
         exit(0);
+    case ' ':
+        engine->changeState(1);
     }
 }
