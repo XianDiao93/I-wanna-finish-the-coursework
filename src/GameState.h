@@ -16,5 +16,7 @@ public:
 	virtual ~GameState() {}
 	virtual void virtSetupBackground();
 	virtual void virtUpdateBackground(int iCurrent);
+	virtual void virtDrawImage(SimpleImage image, int iX, int iY);
+	virtual void virtKeyDown(int iKeyCode);
 };
 

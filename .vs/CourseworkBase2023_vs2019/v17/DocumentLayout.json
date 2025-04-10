@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\StartState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\StartState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\BaseEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\BaseEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\MyEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\MyEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\GameState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\GameState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\GameState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\GameState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\StartState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\StartState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\StartState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\StartState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\mainfunction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\mainfunction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\MyEngine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\MyEngine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\GameState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\GameState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\GameState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\GameState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\BaseEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\BaseEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\mainfunction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{63F64093-23C3-4181-8554-C22C5AE2DDAC}|src\\CourseworkBase.vcxproj|solutionrelative:src\\mainfunction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,41 +46,56 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "MyEngine.h",
               "DocumentMoniker": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\MyEngine.h",
               "RelativeDocumentMoniker": "src\\MyEngine.h",
               "ToolTip": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\MyEngine.h",
               "RelativeToolTip": "src\\MyEngine.h",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAlwCAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-08T13:22:32.356Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MyEngine.cpp",
+              "DocumentMoniker": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\MyEngine.cpp",
+              "RelativeDocumentMoniker": "src\\MyEngine.cpp",
+              "ToolTip": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\MyEngine.cpp",
+              "RelativeToolTip": "src\\MyEngine.cpp",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAlwHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-09T15:18:43.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "StartState.cpp",
               "DocumentMoniker": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\StartState.cpp",
               "RelativeDocumentMoniker": "src\\StartState.cpp",
               "ToolTip": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\StartState.cpp",
               "RelativeToolTip": "src\\StartState.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-09T15:52:53.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "StartState.h",
               "DocumentMoniker": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\StartState.h",
               "RelativeDocumentMoniker": "src\\StartState.h",
               "ToolTip": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\StartState.h",
               "RelativeToolTip": "src\\StartState.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-09T15:52:12.248Z"
+              "WhenOpened": "2025-04-09T15:52:12.248Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -90,49 +105,40 @@
               "RelativeDocumentMoniker": "src\\GameState.cpp",
               "ToolTip": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\GameState.cpp",
               "RelativeToolTip": "src\\GameState.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAtwBMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-09T15:43:48.138Z"
+              "WhenOpened": "2025-04-09T15:43:48.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "GameState.h",
               "DocumentMoniker": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\GameState.h",
               "RelativeDocumentMoniker": "src\\GameState.h",
               "ToolTip": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\GameState.h",
               "RelativeToolTip": "src\\GameState.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswBMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-09T15:42:16.968Z"
+              "WhenOpened": "2025-04-09T15:42:16.968Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MyEngine.cpp",
-              "DocumentMoniker": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\MyEngine.cpp",
-              "RelativeDocumentMoniker": "src\\MyEngine.cpp",
-              "ToolTip": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\MyEngine.cpp",
-              "RelativeToolTip": "src\\MyEngine.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEoAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-09T15:18:43.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "BaseEngine.cpp",
               "DocumentMoniker": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\BaseEngine.cpp",
               "RelativeDocumentMoniker": "src\\BaseEngine.cpp",
               "ToolTip": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\BaseEngine.cpp",
               "RelativeToolTip": "src\\BaseEngine.cpp",
-              "ViewState": "AgIAAL8CAAAAAAAAAAAIwLoAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAlwK8BAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-09T12:57:30.893Z"
+              "WhenOpened": "2025-04-09T12:57:30.893Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "mainfunction.cpp",
               "DocumentMoniker": "C:\\Users\\diaox\\Desktop\\course\\2ndYearSummer\\C\u002B\u002B Programming(COMP2006)\\CW\\I wanna finish the coursework\\src\\mainfunction.cpp",
               "RelativeDocumentMoniker": "src\\mainfunction.cpp",
@@ -140,7 +146,8 @@
               "RelativeToolTip": "src\\mainfunction.cpp",
               "ViewState": "AgIAADwAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-08T10:47:51.926Z"
+              "WhenOpened": "2025-04-08T10:47:51.926Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -28,6 +28,8 @@ public:
     void virtKeyDown(int iKeyCode) override;
     int virtInitialiseObjects() override;
     void updateAllObjects(int iCurrentTime) override;
-    int virtInitialise();
+    int virtInitialise() override;
+    void virtMainLoopDoBeforeUpdate() override;
+    void changeState(int code);
 };
 

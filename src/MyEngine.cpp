@@ -46,6 +46,7 @@ void MyEngine::virtDrawStringsOnTop()
 
 void MyEngine::virtKeyDown(int iKeyCode)
 {
+    currentState->virtKeyDown(iKeyCode);
     //switch (iKeyCode)
     //{
     //case ' ':
@@ -72,7 +73,6 @@ int MyEngine::virtInitialiseObjects()
 void MyEngine::updateAllObjects(int iCurrentTime)
 {
     BaseEngine::updateAllObjects(iCurrentTime);
-    currentState->virtUpdateBackground(iCurrentTime);
 
     //DisplayableObject* obj1 = getDisplayableObject(0);  // Object in controll
     //DisplayableObject* obj2 = getDisplayableObject(1);  // Automated object
@@ -106,4 +106,19 @@ int MyEngine::virtInitialise()
     currentState = new StartState(this, getWindowWidth(), getWindowHeight());
     BaseEngine::virtInitialise();
     return 0;
+}
+
+void MyEngine::virtMainLoopDoBeforeUpdate()
+{
+    if(currentState)
+        currentState->virtUpdateBackground(getModifiedTime());
+}
+
+void MyEngine::changeState(int code)
+{
+    //switch (code)
+    //{
+    //case 1:
+    //    currentState = new SaveState(this);
+    //}
 }
