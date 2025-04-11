@@ -7,10 +7,7 @@ void SaveState::virtSetupBackground()
 
 void SaveState::virtUpdateBackground(int iCurrent)
 {
-	engine->getBackgroundSurface()->mySDLLockSurface();
-	engine->fillBackground(0xffffff);
-	engine->getBackgroundSurface()->mySDLUnlockSurface();
-	engine->redrawDisplay();
+	return;
 }
 
 void SaveState::virtDrawImage(SimpleImage image, int iX, int iY)
@@ -20,5 +17,9 @@ void SaveState::virtDrawImage(SimpleImage image, int iX, int iY)
 
 void SaveState::virtKeyDown(int iKeyCode)
 {
+	if (iKeyCode == esc)
+	{
+		exit(0);
+	}
 	return;
 }

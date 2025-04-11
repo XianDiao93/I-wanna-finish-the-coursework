@@ -15,10 +15,14 @@ void GameState::virtDrawImage(SimpleImage image, int iX, int iY)
 
 void GameState::virtKeyDown(int iKeyCode)
 {
-	switch (iKeyCode)
+	if (iKeyCode == esc)
 	{
-	case '\033':
 		exit(0);
 	}
+	return;
+}
+
+void GameState::virtMouseDown(int iButton, int iX, int iY)
+{
 	return;
 }

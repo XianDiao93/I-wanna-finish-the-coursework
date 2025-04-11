@@ -28,5 +28,6 @@ public:
     void virtUpdateBackground(int iCurrent) override;
     void virtDrawImage(SimpleImage image, int iX, int iY) override;
     void virtKeyDown(int iKeyCode) override;
+    void virtMouseDown(int iButton, int iX, int iY) override;
 };
 

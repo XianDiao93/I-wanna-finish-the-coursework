@@ -16,6 +16,7 @@ void MyEngine::virtSetupBackgroundBuffer()
 
 void MyEngine::virtMouseDown(int iButton, int iX, int iY)
 {
+    currentState->virtMouseDown(iButton, iX, iY);
     //if (iButton == SDL_BUTTON_LEFT)
     //{
     //    stars++;
@@ -48,15 +49,6 @@ void MyEngine::virtDrawStringsOnTop()
 void MyEngine::virtKeyDown(int iKeyCode)
 {
     currentState->virtKeyDown(iKeyCode);
-    //switch (iKeyCode)
-    //{
-    //case ' ':
-    //    lockBackgroundForDrawing();
-    //    virtSetupBackgroundBuffer();
-    //    unlockBackgroundForDrawing();
-    //    redrawDisplay();
-    //    break;
-    //}
 }
 
 int MyEngine::virtInitialiseObjects()
@@ -115,9 +107,19 @@ void MyEngine::virtMainLoopDoBeforeUpdate()
         currentState->virtUpdateBackground(getModifiedTime());
 }
 
+
+
+// 1 is SaveState
+
 void MyEngine::changeState(int code)
 {
     changingState = true;
+    if (currentState)
+    {
+        delete currentState;
+        currentState = nullptr;
+    }
+
     switch (code)
     {
     case 1:
@@ -129,4 +131,5 @@ void MyEngine::changeState(int code)
     virtSetupBackgroundBuffer();
     m_pBackgroundSurface->mySDLUnlockSurface();
     changingState = false;
+    redrawDisplay();
 }
