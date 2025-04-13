@@ -98,11 +98,11 @@
     <ClInclude Include="FlashingDemo.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="ImageMappingDemo.h" />
+    <ClInclude Include="MyTileManager.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="MyEngine.h" />
     <ClInclude Include="SaveState.h" />
     <ClInclude Include="Scyxd6Object.h" />
-    <ClInclude Include="Scyxd6TileManager.h" />
     <ClInclude Include="SimpleFlashingDragableImageObject.h" />
     <ClInclude Include="StarfieldDemo.h" />
     <ClInclude Include="StartState.h" />
@@ -145,9 +145,9 @@
     <ClCompile Include="DisplayableObject.cpp" />
     <ClCompile Include="FontManager.cpp" />
     <ClCompile Include="MyEngine.cpp" />
+    <ClCompile Include="MyTileManager.cpp" />
     <ClCompile Include="SaveState.cpp" />
     <ClCompile Include="Scyxd6Object.cpp" />
-    <ClCompile Include="Scyxd6TileManager.cpp" />
     <ClCompile Include="SimpleImage.cpp" />
     <ClCompile Include="SimpleDemo.cpp" />
     <ClCompile Include="StarfieldDemo.cpp" />

@@ -21,8 +21,7 @@ protected:
 public:
     StartState(MyEngine* pEngine, int maxX, int maxY) : GameState(pEngine, maxX, maxY) {
         backgroundPixels.resize(2 * maxY + 10, std::vector<int>(maxX, 0));
-        kidImage = ImageManager::loadImage("resources/img/Kid.png", true);
-        kidImage.setTransparencyColour(0x000000);
+        kidImage = ImageManager::loadImage("resources/img/Origin/Kid/leftKid1Origin.png", true);
     }
     void virtSetupBackground() override;
     void virtUpdateBackground(int iCurrent) override;

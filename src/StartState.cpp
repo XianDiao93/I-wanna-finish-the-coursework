@@ -60,6 +60,7 @@ void StartState::virtUpdateBackground(int iCurrent)
 {
     const int scrollSpeed = 10;
     int scrollOffset = iCurrent / scrollSpeed;
+    engine->fontManager.loadFonts();
 
     if (!hasStoppedScrolling)
     {
@@ -81,8 +82,11 @@ void StartState::virtUpdateBackground(int iCurrent)
                 engine->setBackgroundPixel(iX, iY, backgroundPixels[sourceY][iX]);
             }
         }
+        Font* msyh3 = engine->fontManager.getFont("Cornerstone Regular.ttf", 30);
+        engine->drawBackgroundString(20, 20, "Click to skip animation", 0xffffff, msyh3);
         engine->getBackgroundSurface()->mySDLUnlockSurface();
         engine->redrawDisplay();
+
     }
     else if (!hasFlashed)
     {
@@ -122,7 +126,7 @@ void StartState::virtUpdateBackground(int iCurrent)
                     engine->setBackgroundPixel(iX, iY, backgroundPixels[iY + maxY][iX]);
                 }
             }
-            engine->fontManager.loadFonts();
+            
             Font* CR12 = engine->fontManager.getFont("Cornerstone Regular.ttf", 120);
             Font* CR6 = engine->fontManager.getFont("Cornerstone Regular.ttf", 60);
             Font* CR3 = engine->fontManager.getFont("Cornerstone Regular.ttf", 30);

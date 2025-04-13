@@ -62,6 +62,11 @@ int MyEngine::virtInitialiseObjects()
     return 0;
 }
 
+void MyEngine::virtCreateWindows(const char* szCaption)
+{
+    BaseEngine::virtCreateWindows("I wanna finish the coursework");
+}
+
 
 void MyEngine::updateAllObjects(int iCurrentTime)
 {

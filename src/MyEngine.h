@@ -3,7 +3,7 @@
 #include "header.h"
 #include "BaseEngine.h"
 #include "ImageManager.h"
-#include "Scyxd6TileManager.h"
+#include "MyTileManager.h"
 #include "FontManager.h"
 #include "GameState.h"
 
@@ -16,7 +16,7 @@ public:
     FontManager fontManager;
 
 protected:
-    Scyxd6TileManager tm;
+    MyTileManager tm;
 
 private:
     GameState* currentState;
@@ -27,10 +27,13 @@ public:
     void virtMouseDown(int iButton, int iX, int iY) override;
     void virtDrawStringsOnTop()override;
     void virtKeyDown(int iKeyCode) override;
-    int virtInitialiseObjects() override;
-    void updateAllObjects(int iCurrentTime) override;
     int virtInitialise() override;
     void virtMainLoopDoBeforeUpdate() override;
     void changeState(int code);
+
+private:
+    void updateAllObjects(int iCurrentTime) override;
+    int virtInitialiseObjects() override;
+    void virtCreateWindows(const char* szCaption) override;
 };
 
