@@ -7,9 +7,13 @@
 #include "UtilCollisionDetection.h"
 #include "StartState.h"
 #include "SaveState.h"
+#include "SettingState.h"
+#include "FileManager.h"
 
 void MyEngine::virtSetupBackgroundBuffer()
 {
+    //FileManager::createOrOverwriteFile("resources/keyboard/keyboard.dat");
+    //FileManager::writeIntsToFile("resources/keyboard/keyboard.dat", keyInt);
     currentState->virtSetupBackground();
 }
 
@@ -48,6 +52,14 @@ void MyEngine::virtDrawStringsOnTop()
 
 void MyEngine::virtKeyDown(int iKeyCode)
 {
+    //printf("%d\n", iKeyCode);
+    //for (int i = 0; i < 8; i++)
+    //{
+    //    if (iKeyCode == keyInt[i])
+    //    {
+    //        currentState->virtKeyDown(i+1);
+    //    }
+    //
     currentState->virtKeyDown(iKeyCode);
 }
 
@@ -129,6 +141,9 @@ void MyEngine::changeState(int code)
     {
     case 1:
         currentState = new SaveState(this, getWindowWidth(), getWindowHeight());
+        break;
+    case 2:
+        currentState = new SettingState(this, getWindowWidth(), getWindowHeight());
         break;
     }
 

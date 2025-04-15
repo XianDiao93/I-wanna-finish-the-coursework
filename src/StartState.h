@@ -16,11 +16,9 @@ private:
     int flashStage = 0;
 
     SimpleImage kidImage;
-protected:
-    std::vector<std::vector<int>> backgroundPixels;
+
 public:
     StartState(MyEngine* pEngine, int maxX, int maxY) : GameState(pEngine, maxX, maxY) {
-        backgroundPixels.resize(2 * maxY + 10, std::vector<int>(maxX, 0));
         kidImage = ImageManager::loadImage("resources/img/Origin/Kid/leftKid1Origin.png", true);
     }
     void virtSetupBackground() override;

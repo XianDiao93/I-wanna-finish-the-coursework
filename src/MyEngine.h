@@ -14,7 +14,7 @@ class MyEngine :
 {
 public:
     FontManager fontManager;
-
+    int mediaSound;
 protected:
     MyTileManager tm;
 

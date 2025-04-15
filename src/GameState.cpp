@@ -15,7 +15,7 @@ void GameState::virtDrawImage(SimpleImage image, int iX, int iY)
 
 void GameState::virtKeyDown(int iKeyCode)
 {
-	if (iKeyCode == esc)
+	if (iKeyCode == keyInt[4])
 	{
 		exit(0);
 	}

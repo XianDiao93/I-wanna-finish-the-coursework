@@ -95,6 +95,7 @@
   <ItemGroup>
     <ClInclude Include="AutomatedObject.h" />
     <ClInclude Include="DraggingDemo.h" />
+    <ClInclude Include="FileManager.h" />
     <ClInclude Include="FlashingDemo.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="ImageMappingDemo.h" />
@@ -103,6 +104,7 @@
     <ClInclude Include="MyEngine.h" />
     <ClInclude Include="SaveState.h" />
     <ClInclude Include="Scyxd6Object.h" />
+    <ClInclude Include="SettingState.h" />
     <ClInclude Include="SimpleFlashingDragableImageObject.h" />
     <ClInclude Include="StarfieldDemo.h" />
     <ClInclude Include="StartState.h" />
@@ -137,6 +139,7 @@
     <ClCompile Include="AutomatedObject.cpp" />
     <ClCompile Include="DraggingDemo.cpp" />
     <ClCompile Include="DrawingSurface.cpp" />
+    <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="FlashingDemo.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="ImageMappingDemo.cpp" />
@@ -148,6 +151,7 @@
     <ClCompile Include="MyTileManager.cpp" />
     <ClCompile Include="SaveState.cpp" />
     <ClCompile Include="Scyxd6Object.cpp" />
+    <ClCompile Include="SettingState.cpp" />
     <ClCompile Include="SimpleImage.cpp" />
     <ClCompile Include="SimpleDemo.cpp" />
     <ClCompile Include="StarfieldDemo.cpp" />

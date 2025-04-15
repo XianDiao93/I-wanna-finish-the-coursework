@@ -6,46 +6,6 @@ void StartState::virtSetupBackground()
 {
     engine->fillBackground(0x000000);
 
-    std::srand(static_cast<unsigned>(std::time(nullptr)));
-
-    for (int iY = 0; iY < maxY; iY++)
-    {
-        for (int iX = 0; iX < maxX; iX++)
-        {
-            int color = 0x000000;
-            int randomNumber = std::rand() % 1000 + 1;
-
-            if (randomNumber <= 10)
-            {
-                color = 0xffffff;
-            }
-
-            backgroundPixels[iY][iX] = color;
-        }
-    }
-
-    for (int iY = 0; iY < maxY; iY++)
-    {
-        int red = 0;
-        int green = 0;
-        int blue = 255 - (255 * iY / maxY);
-        int baseColor = (red << 16) | (green << 8) | blue;
-
-        for (int iX = 0; iX < maxX; iX++)
-        {
-            int color = baseColor;
-            int randomNumber = std::rand() % 1000 + 1;
-
-            if (randomNumber <= (int)10*iY/maxY)
-            {
-                color = 0xffffff;
-            }
-
-            backgroundPixels[2*maxY-iY][iX] = color;
-        }
-    }
-
-
     for (int iY = 0; iY < maxY; iY++)
     {
 
@@ -106,7 +66,7 @@ void StartState::virtUpdateBackground(int iCurrent)
                 }
             }
             engine->getBackgroundSurface()->mySDLUnlockSurface();
-            virtDrawImage(kidImage, 750, 350);
+            virtDrawImage(kidImage, 850, 350);
             engine->redrawDisplay();
 
             flashStage = 2;
@@ -136,7 +96,7 @@ void StartState::virtUpdateBackground(int iCurrent)
             engine->drawBackgroundString(80, 610, "Press esc to quit", 0xeeeeee, CR3);
             engine->getBackgroundSurface()->mySDLUnlockSurface();
 
-            virtDrawImage(kidImage, 750, 350);
+            virtDrawImage(kidImage, 850, 350);
             engine->redrawDisplay();
 
             flashStage = 4;
@@ -161,11 +121,11 @@ void StartState::virtDrawImage(SimpleImage image, int iX, int iY)
 
 void StartState::virtKeyDown(int iKeyCode)
 {
-    if (iKeyCode == esc)
+    if (iKeyCode == keyInt[4])
     {
         exit(0);
     }
-    else if (iKeyCode == jump)
+    else if (iKeyCode == keyInt[2])
     {
         engine->changeState(1);
     }

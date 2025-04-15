@@ -5,10 +5,16 @@
 class MyTileManager :
     public TileManager
 {
+private:
+    std::vector<SimpleImage> m_vecTileImages;
+    SimpleImage image;
 public:
     MyTileManager()
-        : TileManager(25, 25, 20, 20)
+        : TileManager(32, 32, 6, 10)
     {
+        m_vecTileImages.push_back(ImageManager::loadImage("resources/img/Tile/Block/tubeHorizontal.png", true));
+        m_vecTileImages.push_back(ImageManager::loadImage("resources/img/Tile/Block/tubeVerticle.png", true));
+        m_vecTileImages.push_back(ImageManager::loadImage("resources/img/Tile/Block/tubeNode.png", true));
     }
     virtual void virtDrawTileAt(
         BaseEngine* pEngine,

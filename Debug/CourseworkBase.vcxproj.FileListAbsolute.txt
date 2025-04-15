@@ -1,2 +1,1 @@
-C:\Users\diaox\Desktop\course\2ndYearSummer\C++ Programming(COMP2006)\CW\CPPCoursework2023-v105-Demo\Debug\CourseworkBase2020.exe
 C:\Users\diaox\Desktop\course\2ndYearSummer\C++ Programming(COMP2006)\CW\I wanna finish the coursework\Debug\CourseworkBase2020.exe
