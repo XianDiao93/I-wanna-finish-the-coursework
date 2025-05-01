@@ -15,6 +15,7 @@ class MyEngine :
 public:
     FontManager fontManager;
     int mediaSound;
+
 protected:
     MyTileManager tm;
 
@@ -35,5 +36,6 @@ private:
     void updateAllObjects(int iCurrentTime) override;
     int virtInitialiseObjects() override;
     void virtCreateWindows(const char* szCaption) override;
+    bool checkCode(int code);
 };
 

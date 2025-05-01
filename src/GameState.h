@@ -14,8 +14,8 @@ protected:
 	std::string keyboardInt = "resources/keyboard/keyboardInt.dat";
 	std::string keyboardString = "resources/keyboard/keyboardString.dat";
 	std::vector<int> keyInt = { 1073741904, 1073741903, 1073742049, 122, 27, 114, 32, 8 }; // used for change input
-	std::vector<std::string> keyString = {"->", "<-", "left shift", "z", "esc", "r", "space", "backspace"};
-	std::vector<std::string> keyName = {"left", "right", "jump", "shoot", "escape", "retry", "pause", "back"};
+	std::vector<std::string> keyString = {"right", "left", "left shift", "z", "esc", "r", "space", "backspace"};
+	std::vector<std::string> keyName = {"right", "left", "jump", "shoot", "escape", "retry", "pause", "back"};
 
 public:
 	GameState(MyEngine* pEngine, int maxX, int maxY) : engine(pEngine), maxX(maxX), maxY(maxY) {

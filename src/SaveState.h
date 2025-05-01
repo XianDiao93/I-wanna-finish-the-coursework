@@ -10,6 +10,10 @@ private:
     SimpleImage kidImage;
     int selected;
     int selectStage;
+
+    Font* CR2;
+    Font* CR3;
+    Font* CR6;
 protected:
     MyTileManager tm;
 public:
@@ -18,6 +22,10 @@ public:
         kidImage = ImageManager::loadImage("resources/img/Origin/Kid/leftKid1Origin.png", true);
         selected = 1;
         selectStage = 1;
+
+        CR2 = engine->fontManager.getFont("Cornerstone Regular.ttf", 20);
+        CR3 = engine->fontManager.getFont("Cornerstone Regular.ttf", 30);
+        CR6 = engine->fontManager.getFont("Cornerstone Regular.ttf", 60);
     }
     void virtSetupBackground() override;
     void virtUpdateBackground(int iCurrent) override;

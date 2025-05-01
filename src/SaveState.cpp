@@ -32,8 +32,6 @@ void SaveState::virtSetupBackground()
 	tm.setTopLeftPositionOnScreen(550, 300);
 	tm.drawAllTiles(engine, engine->getBackgroundSurface());
 
-	Font* CR3 = engine->fontManager.getFont("Cornerstone Regular.ttf", 30);
-	Font* CR6 = engine->fontManager.getFont("Cornerstone Regular.ttf", 60);
 	engine->drawBackgroundString(100, 340, "Save1", 0xeeeeee, CR3);
 	engine->drawBackgroundString(350, 340, "Save2", 0xeeeeee, CR3);
 	engine->drawBackgroundString(600, 340, "Save3", 0xeeeeee, CR3);
@@ -43,7 +41,7 @@ void SaveState::virtSetupBackground()
 	std::string msg = "Use " + keyString[0] + " and " + keyString[1] + " to move, use "+ keyString[2] + " to select, use "+ keyString[3] + " to backspace";
 	char* c_msg = new char[msg.length() + 1];
 	strcpy(c_msg, msg.c_str());
-	engine->drawBackgroundString(50, 240, c_msg, 0xeeeeee, CR3);
+	engine->drawBackgroundString(50, 240, c_msg, 0xeeeeee, CR2);
 	delete[] c_msg;
 }
 
@@ -115,7 +113,7 @@ void SaveState::virtDrawImage(SimpleImage image, int iX, int iY)
 
 void SaveState::virtKeyDown(int iKeyCode)
 {
-	if (iKeyCode == keyInt[3])
+	if (iKeyCode == keyInt[3] || iKeyCode == keyInt[7])
 	{
 		if (selectStage > 1)
 		{
@@ -137,7 +135,7 @@ void SaveState::virtKeyDown(int iKeyCode)
 	{
 		exit(0);
 	}
-	else if (iKeyCode == keyInt[1] && selectStage == 1)
+	else if (iKeyCode == keyInt[0] && selectStage == 1)
 	{
 		if (selected < 3)
 		{
@@ -148,7 +146,7 @@ void SaveState::virtKeyDown(int iKeyCode)
 			selected = 1;
 		}
 	}
-	else if (iKeyCode == keyInt[0] && selectStage == 1)
+	else if (iKeyCode == keyInt[1] && selectStage == 1)
 	{
 		if (selected > 1)
 		{
@@ -164,5 +162,6 @@ void SaveState::virtKeyDown(int iKeyCode)
 
 void SaveState::virtMouseDown(int iButton, int iX, int iY)
 {
-	engine->changeState(2);
+	if(iX > 50 && iX < 600 && iY > 195 && iY < 235)
+		engine->changeState(2);
 }

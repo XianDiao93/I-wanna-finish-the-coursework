@@ -79,7 +79,6 @@ void MyEngine::virtCreateWindows(const char* szCaption)
     BaseEngine::virtCreateWindows("I wanna finish the coursework");
 }
 
-
 void MyEngine::updateAllObjects(int iCurrentTime)
 {
     BaseEngine::updateAllObjects(iCurrentTime);
@@ -108,6 +107,7 @@ void MyEngine::updateAllObjects(int iCurrentTime)
     //    tm.setAndRedrawMapValueAt(mapX, mapY, 0xffffff, this, getBackgroundSurface());
     //    redrawDisplay(); // Force background to be redrawn to foreground
     //}
+
 }
 
 
@@ -127,11 +127,12 @@ void MyEngine::virtMainLoopDoBeforeUpdate()
 
 
 // 1 is SaveState
+// 2 is SettingState
 
 void MyEngine::changeState(int code)
 {
     changingState = true;
-    if (currentState)
+    if (currentState && checkCode(code))
     {
         delete currentState;
         currentState = nullptr;
@@ -153,3 +154,16 @@ void MyEngine::changeState(int code)
     changingState = false;
     redrawDisplay();
 }
+
+bool MyEngine::checkCode(int code)
+{
+    for (int i = 1; i < 3; i++)
+    {
+        if (i == code)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
