@@ -15,6 +15,8 @@ class MyEngine :
 public:
     FontManager fontManager;
     int mediaSound;
+    int difficulty = 1;
+    int saves = 1;
 
 protected:
     MyTileManager tm;

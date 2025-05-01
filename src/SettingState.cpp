@@ -55,7 +55,7 @@ void SettingState::virtKeyDown(int iKeyCode)
 	{
 		exit(0);
 	}
-	else if (iKeyCode == keyInt[7] && flag2)
+	else if ((iKeyCode == keyInt[7] || iKeyCode == keyInt[3]) && flag2)
 	{
 		engine->changeState(1);
 	}
@@ -104,7 +104,7 @@ void SettingState::virtMouseDown(int iButton, int iX, int iY)
 	if (iButton == SDL_BUTTON_RIGHT)
 	{
 		flag2 = true;
-		// printf("Hello\n");
+
 		engine->getBackgroundSurface()->mySDLLockSurface();
 		virtSetupBackground();
 		engine->getBackgroundSurface()->mySDLUnlockSurface();
@@ -113,7 +113,6 @@ void SettingState::virtMouseDown(int iButton, int iX, int iY)
 	{
 		FileManager::writeStringsToFile(keyboardString, keyString);
 		FileManager::writeIntsToFile(keyboardInt, keyInt);
-		// printf("hello\n");
 	}
 	else if (iX > 200 && iX < 300 && flag2)
 	{

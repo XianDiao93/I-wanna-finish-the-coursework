@@ -60,22 +60,52 @@ void SaveState::virtUpdateBackground(int iCurrent)
 	if ((iCurrent / 100) % 4 == 0)
 	{
 		rightKid = ImageManager::loadImage("resources/img/Kid/rightKid1.png", true);
-		virtDrawImage(rightKid, 130 + 250 * (selected - 1), 640);
+		virtDrawImage(rightKid, 130 + 250 * (saves-1), 640);
 	}	
 	else if ((iCurrent / 100) % 4 == 1)
 	{
 		rightKid = ImageManager::loadImage("resources/img/Kid/rightKid2.png", true);
-		virtDrawImage(rightKid, 130 + 250 * (selected - 1), 640);
+		virtDrawImage(rightKid, 130 + 250 * (saves-1), 640);
 	}
 	else if ((iCurrent / 100) % 4 == 2)
 	{
 		rightKid = ImageManager::loadImage("resources/img/Kid/rightKid3.png", true);
-		virtDrawImage(rightKid, 130 + 250 * (selected - 1), 640);
+		virtDrawImage(rightKid, 130 + 250 * (saves-1), 640);
 	}
 	else if ((iCurrent / 100) % 4 == 3)
 	{
 		rightKid = ImageManager::loadImage("resources/img/Kid/rightKid4.png", true);
-		virtDrawImage(rightKid, 130 + 250 * (selected - 1), 640);
+		virtDrawImage(rightKid, 130 + 250 * (saves-1), 640);
+	}
+
+	if (flag && selectStage == 1)
+	{
+		flag = false;
+		for (int iY = 550; iY < 575; iY++)
+		{
+			for (int iX = 90; iX < 210; iX++)
+			{
+				engine->setBackgroundPixel(iX, iY, backgroundPixels[maxY + iY][iX]);
+				engine->setBackgroundPixel(iX + 250, iY, backgroundPixels[maxY + iY][iX]);
+				engine->setBackgroundPixel(iX + 500, iY, backgroundPixels[maxY + iY][iX]);
+			}
+		}
+		
+	}
+	else if (flag && selectStage == 2)
+	{
+		flag = false;
+		for (int iY = 550; iY < 575; iY++)
+		{
+			for (int iX = 90; iX < 210; iX++)
+			{
+				engine->setBackgroundPixel(iX, iY, backgroundPixels[maxY + iY][iX]);
+				engine->setBackgroundPixel(iX + 250, iY, backgroundPixels[maxY + iY][iX]);
+				engine->setBackgroundPixel(iX + 500, iY, backgroundPixels[maxY + iY][iX]);
+			}
+		}
+		engine->drawBackgroundString(90 + 250 * (saves-1), 550, difficulties[difficulty - 1].c_str(), 0xeeeeee, CR2);
+
 	}
 	engine->getBackgroundSurface()->mySDLUnlockSurface();
 	//else if ((iCurrent / 66) % 6 == 4)
@@ -119,43 +149,83 @@ void SaveState::virtKeyDown(int iKeyCode)
 		{
 			selectStage--;
 		}
+		flag = true;
+		difficulty = 1;
 	}
 	else if (iKeyCode == keyInt[2])
 	{
-		if (selectStage < 2)
+		if (selectStage == 2)
+		{
+			engine->difficulty = difficulty;
+			engine->saves = saves;
+			engine->changeState(3);
+			printf("hello\n");
+		}
+		else if (selectStage < 2)
 		{
 			selectStage++;
+			
 		}
-		else if (selectStage == 2)
-		{
-			return; // TODO
-		}
+		flag = true;
 	}
 	else if (iKeyCode == keyInt[4])
 	{
 		exit(0);
 	}
-	else if (iKeyCode == keyInt[0] && selectStage == 1)
+	else if (iKeyCode == keyInt[0])
 	{
-		if (selected < 3)
+		if (selectStage == 1)
 		{
-			selected++;
+			if (saves < 3)
+			{
+				saves++;
+			}
+			else if (saves == 3)
+			{
+				saves = 1;
+			}
 		}
-		else if (selected == 3)
+		else if (selectStage == 2)
 		{
-			selected = 1;
+			flag = true;
+			if (difficulty < 5)
+			{
+				difficulty++;
+			}
+			else if (difficulty >= 5)
+			{
+				difficulty = 1;
+			}
 		}
 	}
-	else if (iKeyCode == keyInt[1] && selectStage == 1)
+	else if (iKeyCode == keyInt[1])
 	{
-		if (selected > 1)
+		if (selectStage == 1)
 		{
-			selected--;
+			if (saves > 1)
+			{
+				saves--;
+			}
+			else if (saves == 1)
+			{
+				saves = 3;
+			}
+
 		}
-		else if (selected == 1)
+		else if (selectStage == 2)
 		{
-			selected = 3;
+			flag = true;
+
+			if (difficulty > 1)
+			{
+				difficulty--;
+			}
+			else if (difficulty <= 1)
+			{
+				difficulty = 5;
+			}
 		}
+
 	}
 	return;
 }

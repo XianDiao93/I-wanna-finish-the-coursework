@@ -9,4 +9,5 @@ public:
 	static std::vector<int> readIntsFromFile(const std::string& filename);
 	static std::vector<std::string> readStringsFromFile(const std::string& filename);
 	static bool checkOrCreateFile(const std::string& filename);
+	// static bool checkFile(const std::string& filename);
 };

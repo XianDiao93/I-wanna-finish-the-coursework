@@ -126,8 +126,10 @@ void MyEngine::virtMainLoopDoBeforeUpdate()
 
 
 
-// 1 is SaveState
-// 2 is SettingState
+// 1 is Save state
+// 2 is Setting state
+// 3 is Play state
+// 4 is Pause state
 
 void MyEngine::changeState(int code)
 {
@@ -145,6 +147,9 @@ void MyEngine::changeState(int code)
         break;
     case 2:
         currentState = new SettingState(this, getWindowWidth(), getWindowHeight());
+        break;
+    case 3:
+        // TODO
         break;
     }
 

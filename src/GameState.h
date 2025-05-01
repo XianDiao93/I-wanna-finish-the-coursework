@@ -10,6 +10,9 @@ class GameState
 protected:
 	MyEngine* engine;
 	int maxY, maxX;
+	int difficulty = 1;
+	int saves = 1;
+
 	std::vector<std::vector<int>> backgroundPixels;
 	std::string keyboardInt = "resources/keyboard/keyboardInt.dat";
 	std::string keyboardString = "resources/keyboard/keyboardString.dat";

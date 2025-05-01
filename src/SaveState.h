@@ -8,8 +8,9 @@ class SaveState :
 private:
     SimpleImage rightKid;
     SimpleImage kidImage;
-    int selected;
     int selectStage;
+    bool flag = false;
+    std::string difficulties[5] = {"continue", "medium", "hard", "very hard", "impossible"};
 
     Font* CR2;
     Font* CR3;
@@ -20,7 +21,6 @@ public:
     SaveState(MyEngine* pEngine, int maxX, int maxY) : GameState(pEngine, maxX, maxY) {
         rightKid = ImageManager::loadImage("resources/img/Kid/rightKid1.png", true);
         kidImage = ImageManager::loadImage("resources/img/Origin/Kid/leftKid1Origin.png", true);
-        selected = 1;
         selectStage = 1;
 
         CR2 = engine->fontManager.getFont("Cornerstone Regular.ttf", 20);
