@@ -189,11 +189,6 @@ protected:
 	Defaulted to true, meaning that the displayable object container has ownership and should delete the objects.
 	*/
 	bool m_bDeleteWhenContainerDeleted;
-
-public:
-	// This variable record the velocity of objects
-	int velocity;
-	void setVelocity(int velocity);
 };
 
 

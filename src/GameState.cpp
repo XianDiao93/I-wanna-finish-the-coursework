@@ -22,7 +22,16 @@ void GameState::virtKeyDown(int iKeyCode)
 	return;
 }
 
+void GameState::virtKeyUp(int iKeyCode)
+{
+}
+
 void GameState::virtMouseDown(int iButton, int iX, int iY)
+{
+	return;
+}
+
+void GameState::virtUpdateObjects(int iCurrent)
 {
 	return;
 }

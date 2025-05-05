@@ -12,7 +12,7 @@ public:
         m_iCurrentScreenY = 200;
         m_iDrawWidth = 100;
         m_iDrawHeight = 100;
-        this->velocity = velocity;
+        // this->velocity = velocity;
     }
     AutomatedObject(BaseEngine* pEngine)
         : AutomatedObject(pEngine, 0) {

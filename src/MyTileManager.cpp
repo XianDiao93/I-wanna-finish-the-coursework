@@ -5,7 +5,6 @@ void MyTileManager::virtDrawTileAt(BaseEngine* pEngine, DrawingSurface* pSurface
 {
 	int iMapValue = getMapValue(iMapX, iMapY);
 
-
 	if (iMapValue >= 0 && iMapValue < m_vecTileImages.size()) {
 		m_vecTileImages[iMapValue].renderImage(pSurface,
 			0,

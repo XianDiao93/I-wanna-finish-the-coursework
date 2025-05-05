@@ -17,7 +17,7 @@ void AutomatedObject::virtDraw()
 void AutomatedObject::virtDoUpdate(int iCurrentTime)
 {
 
-	m_iCurrentScreenX += velocity * hDirection;
+	m_iCurrentScreenX += 2 * hDirection;
 	if (m_iCurrentScreenX > 700)
 	{
 		hDirection = -1;

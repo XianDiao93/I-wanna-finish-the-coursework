@@ -8,6 +8,7 @@
 #include "StartState.h"
 #include "SaveState.h"
 #include "SettingState.h"
+#include "PlayState.h"
 #include "FileManager.h"
 
 void MyEngine::virtSetupBackgroundBuffer()
@@ -63,14 +64,19 @@ void MyEngine::virtKeyDown(int iKeyCode)
     currentState->virtKeyDown(iKeyCode);
 }
 
+void MyEngine::virtKeyUp(int iKeyCode)
+{
+    currentState->virtKeyUp(iKeyCode);
+}
+
 int MyEngine::virtInitialiseObjects()
 {
     //drawableObjectsChanged();
     //destroyOldObjects(true); 
     //createObjectArray(2);
-    //storeObjectInArray(0, new Scyxd6Object(this));
-    //storeObjectInArray(1, new AutomatedObject(this, 2));
-    //setAllObjectsVisible(true);
+    //storeObjectInArray(0, new Player(this, 100, 100));
+    //// storeObjectInArray(1, new AutomatedObject(this, 2));
+    //setAllObjectsVisible(false);
     return 0;
 }
 
@@ -82,6 +88,8 @@ void MyEngine::virtCreateWindows(const char* szCaption)
 void MyEngine::updateAllObjects(int iCurrentTime)
 {
     BaseEngine::updateAllObjects(iCurrentTime);
+    currentState->virtUpdateObjects(iCurrentTime);
+    redrawDisplay();
 
     //DisplayableObject* obj1 = getDisplayableObject(0);  // Object in controll
     //DisplayableObject* obj2 = getDisplayableObject(1);  // Automated object
@@ -149,7 +157,8 @@ void MyEngine::changeState(int code)
         currentState = new SettingState(this, getWindowWidth(), getWindowHeight());
         break;
     case 3:
-        // TODO
+        currentState = new PlayState(this, getWindowWidth(), getWindowHeight());
+        setAllObjectsVisible(true);
         break;
     }
 

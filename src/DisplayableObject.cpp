@@ -124,11 +124,3 @@ bool DisplayableObject::virtIsObjectInRedrawArea()
 		return false; // Too far below
 	return true;
 }
-
-/*
-Set the velocity of an object
-*/
-void DisplayableObject::setVelocity(int velocity)
-{
-	this->velocity = velocity;
-}

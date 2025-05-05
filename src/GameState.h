@@ -2,6 +2,7 @@
 #include "header.h"
 #include "MyEngine.h"
 #include "FileManager.h"
+#include "Utilities.h"
 
 class MyEngine;
 
@@ -10,7 +11,7 @@ class GameState
 protected:
 	MyEngine* engine;
 	int maxY, maxX;
-	int difficulty = 1;
+	int difficulty = 0;
 	int saves = 1;
 
 	std::vector<std::vector<int>> backgroundPixels;
@@ -19,7 +20,6 @@ protected:
 	std::vector<int> keyInt = { 1073741904, 1073741903, 1073742049, 122, 27, 114, 32, 8 }; // used for change input
 	std::vector<std::string> keyString = {"right", "left", "left shift", "z", "esc", "r", "space", "backspace"};
 	std::vector<std::string> keyName = {"right", "left", "jump", "shoot", "escape", "retry", "pause", "back"};
-
 public:
 	GameState(MyEngine* pEngine, int maxX, int maxY) : engine(pEngine), maxX(maxX), maxY(maxY) {
 		if (!FileManager::checkOrCreateFile(keyboardInt))
@@ -81,6 +81,8 @@ public:
 	virtual void virtUpdateBackground(int iCurrent);
 	virtual void virtDrawImage(SimpleImage image, int iX, int iY);
 	virtual void virtKeyDown(int iKeyCode);
+	virtual void virtKeyUp(int iKeyCode);
 	virtual void virtMouseDown(int iButton, int iX, int iY);
+	virtual void virtUpdateObjects(int iCurrent);
 };
 

@@ -1,3 +1,4 @@
+#include "header.h"
 #include "SaveState.h"
 
 void SaveState::virtSetupBackground()
@@ -104,26 +105,10 @@ void SaveState::virtUpdateBackground(int iCurrent)
 				engine->setBackgroundPixel(iX + 500, iY, backgroundPixels[maxY + iY][iX]);
 			}
 		}
-		engine->drawBackgroundString(90 + 250 * (saves-1), 550, difficulties[difficulty - 1].c_str(), 0xeeeeee, CR2);
+		engine->drawBackgroundString(90 + 250 * (saves-1), 550, difficulties[difficulty].c_str(), 0xeeeeee, CR2);
 
 	}
 	engine->getBackgroundSurface()->mySDLUnlockSurface();
-	//else if ((iCurrent / 66) % 6 == 4)
-	//{
-	//	engine->getBackgroundSurface()->mySDLLockSurface();
-	//	engine->fillBackground(0xffffff);
-	//	rightKid = ImageManager::loadImage("resources/img/Kid/rightRun5.png", true);
-	//	virtDrawImage(rightKid, 650, 350);
-	//	engine->getBackgroundSurface()->mySDLUnlockSurface();
-	//}
-	//else if ((iCurrent / 66) % 6 == 5)
-	//{
-	//	engine->getBackgroundSurface()->mySDLLockSurface();
-	//	engine->fillBackground(0xffffff);
-	//	rightKid = ImageManager::loadImage("resources/img/Kid/rightRun6.png", true);
-	//	virtDrawImage(rightKid, 650, 350);
-	//	engine->getBackgroundSurface()->mySDLUnlockSurface();
-	//}
 	engine->redrawDisplay();
 }
 
@@ -150,7 +135,7 @@ void SaveState::virtKeyDown(int iKeyCode)
 			selectStage--;
 		}
 		flag = true;
-		difficulty = 1;
+		difficulty = 0;
 	}
 	else if (iKeyCode == keyInt[2])
 	{
@@ -159,7 +144,7 @@ void SaveState::virtKeyDown(int iKeyCode)
 			engine->difficulty = difficulty;
 			engine->saves = saves;
 			engine->changeState(3);
-			printf("hello\n");
+			// printf("hello\n");
 		}
 		else if (selectStage < 2)
 		{
@@ -188,13 +173,13 @@ void SaveState::virtKeyDown(int iKeyCode)
 		else if (selectStage == 2)
 		{
 			flag = true;
-			if (difficulty < 5)
+			if (difficulty < 4)
 			{
 				difficulty++;
 			}
-			else if (difficulty >= 5)
+			else if (difficulty >= 4)
 			{
-				difficulty = 1;
+				difficulty = 0;
 			}
 		}
 	}
@@ -216,13 +201,13 @@ void SaveState::virtKeyDown(int iKeyCode)
 		{
 			flag = true;
 
-			if (difficulty > 1)
+			if (difficulty > 0)
 			{
 				difficulty--;
 			}
-			else if (difficulty <= 1)
+			else if (difficulty <= 0)
 			{
-				difficulty = 5;
+				difficulty = 4;
 			}
 		}
 

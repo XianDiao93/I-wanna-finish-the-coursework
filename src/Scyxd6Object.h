@@ -12,7 +12,6 @@ public:
         m_iCurrentScreenY = 200;
         m_iDrawWidth = 100;
         m_iDrawHeight = 100;
-        velocity = 2;
     }
     void virtDraw();
     void virtDoUpdate(int iCurrentTime);

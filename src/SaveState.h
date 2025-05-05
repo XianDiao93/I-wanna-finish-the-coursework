@@ -26,6 +26,7 @@ public:
         CR2 = engine->fontManager.getFont("Cornerstone Regular.ttf", 20);
         CR3 = engine->fontManager.getFont("Cornerstone Regular.ttf", 30);
         CR6 = engine->fontManager.getFont("Cornerstone Regular.ttf", 60);
+
     }
     void virtSetupBackground() override;
     void virtUpdateBackground(int iCurrent) override;
