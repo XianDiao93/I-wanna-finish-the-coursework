@@ -9,13 +9,22 @@ class MyEngine;
 class StartState :
     public GameState
 {
-protected:
-    std::vector<std::vector<int>> backgroundPixels;
+private:
+    bool hasStoppedScrolling = false;
+    bool hasFlashed = false;
+    int flashTimer = 0;
+    int flashStage = 0;
+
+    SimpleImage kidImage;
+
 public:
     StartState(MyEngine* pEngine, int maxX, int maxY) : GameState(pEngine, maxX, maxY) {
-        backgroundPixels.resize(2 * maxY + 10, std::vector<int>(maxX, 0));
+        kidImage = ImageManager::loadImage("resources/img/Origin/Kid/leftKid1Origin.png", true);
     }
     void virtSetupBackground() override;
     void virtUpdateBackground(int iCurrent) override;
+    void virtDrawImage(SimpleImage image, int iX, int iY) override;
+    void virtKeyDown(int iKeyCode) override;
+    void virtMouseDown(int iButton, int iX, int iY) override;
 };
 

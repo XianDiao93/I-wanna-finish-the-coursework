@@ -2,19 +2,24 @@
 #include "header.h"
 #include "MyEngine.h"
 #include "ImageManager.h"
-#include "Scyxd6Object.h"
-#include "AutomatedObject.h"
 #include "UtilCollisionDetection.h"
 #include "StartState.h"
+#include "SaveState.h"
+#include "SettingState.h"
+#include "PlayState.h"
+#include "FileManager.h"
 
 void MyEngine::virtSetupBackgroundBuffer()
 {
+    //FileManager::createOrOverwriteFile("resources/keyboard/keyboard.dat");
+    //FileManager::writeIntsToFile("resources/keyboard/keyboard.dat", keyInt);
     currentState->virtSetupBackground();
 }
 
 
 void MyEngine::virtMouseDown(int iButton, int iX, int iY)
 {
+    currentState->virtMouseDown(iButton, iX, iY);
     //if (iButton == SDL_BUTTON_LEFT)
     //{
     //    stars++;
@@ -46,15 +51,20 @@ void MyEngine::virtDrawStringsOnTop()
 
 void MyEngine::virtKeyDown(int iKeyCode)
 {
-    //switch (iKeyCode)
+    //printf("%d\n", iKeyCode);
+    //for (int i = 0; i < 8; i++)
     //{
-    //case ' ':
-    //    lockBackgroundForDrawing();
-    //    virtSetupBackgroundBuffer();
-    //    unlockBackgroundForDrawing();
-    //    redrawDisplay();
-    //    break;
-    //}
+    //    if (iKeyCode == keyInt[i])
+    //    {
+    //        currentState->virtKeyDown(i+1);
+    //    }
+    //
+    currentState->virtKeyDown(iKeyCode);
+}
+
+void MyEngine::virtKeyUp(int iKeyCode)
+{
+    currentState->virtKeyUp(iKeyCode);
 }
 
 int MyEngine::virtInitialiseObjects()
@@ -62,17 +72,22 @@ int MyEngine::virtInitialiseObjects()
     //drawableObjectsChanged();
     //destroyOldObjects(true); 
     //createObjectArray(2);
-    //storeObjectInArray(0, new Scyxd6Object(this));
-    //storeObjectInArray(1, new AutomatedObject(this, 2));
-    //setAllObjectsVisible(true);
+    //storeObjectInArray(0, new Player(this, 100, 100));
+    //// storeObjectInArray(1, new AutomatedObject(this, 2));
+    //setAllObjectsVisible(false);
     return 0;
 }
 
+void MyEngine::virtCreateWindows(const char* szCaption)
+{
+    BaseEngine::virtCreateWindows("I wanna finish the coursework");
+}
 
 void MyEngine::updateAllObjects(int iCurrentTime)
 {
     BaseEngine::updateAllObjects(iCurrentTime);
-    currentState->virtUpdateBackground(iCurrentTime);
+    currentState->virtUpdateObjects(iCurrentTime);
+    redrawDisplay();
 
     //DisplayableObject* obj1 = getDisplayableObject(0);  // Object in controll
     //DisplayableObject* obj2 = getDisplayableObject(1);  // Automated object
@@ -98,6 +113,7 @@ void MyEngine::updateAllObjects(int iCurrentTime)
     //    tm.setAndRedrawMapValueAt(mapX, mapY, 0xffffff, this, getBackgroundSurface());
     //    redrawDisplay(); // Force background to be redrawn to foreground
     //}
+
 }
 
 
@@ -107,3 +123,59 @@ int MyEngine::virtInitialise()
     BaseEngine::virtInitialise();
     return 0;
 }
+
+void MyEngine::virtMainLoopDoBeforeUpdate()
+{
+    if(currentState && !changingState)
+        currentState->virtUpdateBackground(getModifiedTime());
+}
+
+
+
+// 1 is Save state
+// 2 is Setting state
+// 3 is Play state
+// 4 is Pause state
+
+void MyEngine::changeState(int code)
+{
+    changingState = true;
+    if (currentState && checkCode(code))
+    {
+        delete currentState;
+        currentState = nullptr;
+    }
+
+    switch (code)
+    {
+    case 1:
+        currentState = new SaveState(this, getWindowWidth(), getWindowHeight());
+        break;
+    case 2:
+        currentState = new SettingState(this, getWindowWidth(), getWindowHeight());
+        break;
+    case 3:
+        currentState = new PlayState(this, getWindowWidth(), getWindowHeight());
+        setAllObjectsVisible(true);
+        break;
+    }
+
+    m_pBackgroundSurface->mySDLLockSurface();
+    virtSetupBackgroundBuffer();
+    m_pBackgroundSurface->mySDLUnlockSurface();
+    changingState = false;
+    redrawDisplay();
+}
+
+bool MyEngine::checkCode(int code)
+{
+    for (int i = 1; i < 3; i++)
+    {
+        if (i == code)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+

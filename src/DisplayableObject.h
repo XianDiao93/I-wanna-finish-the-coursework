@@ -190,10 +190,6 @@ protected:
 	*/
 	bool m_bDeleteWhenContainerDeleted;
 
-public:
-	// This variable record the velocity of objects
-	int velocity;
-	void setVelocity(int velocity);
 };
 
 
