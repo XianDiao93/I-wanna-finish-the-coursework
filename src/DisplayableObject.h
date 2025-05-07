@@ -189,6 +189,7 @@ protected:
 	Defaulted to true, meaning that the displayable object container has ownership and should delete the objects.
 	*/
 	bool m_bDeleteWhenContainerDeleted;
+
 };
 
 

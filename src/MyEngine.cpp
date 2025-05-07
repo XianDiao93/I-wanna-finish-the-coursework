@@ -2,8 +2,6 @@
 #include "header.h"
 #include "MyEngine.h"
 #include "ImageManager.h"
-#include "Scyxd6Object.h"
-#include "AutomatedObject.h"
 #include "UtilCollisionDetection.h"
 #include "StartState.h"
 #include "SaveState.h"

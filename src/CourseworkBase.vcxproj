@@ -93,7 +93,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AutomatedObject.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="DraggingDemo.h" />
     <ClInclude Include="FileManager.h" />
@@ -109,7 +108,6 @@
     <ClInclude Include="MyEngine.h" />
     <ClInclude Include="Save.h" />
     <ClInclude Include="SaveState.h" />
-    <ClInclude Include="Scyxd6Object.h" />
     <ClInclude Include="SettingState.h" />
     <ClInclude Include="SimpleFlashingDragableImageObject.h" />
     <ClInclude Include="StarfieldDemo.h" />
@@ -143,7 +141,6 @@
     <ClInclude Include="ZoomingDemo.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutomatedObject.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="DraggingDemo.cpp" />
     <ClCompile Include="DrawingSurface.cpp" />
@@ -163,7 +160,6 @@
     <ClCompile Include="PlayState.cpp" />
     <ClCompile Include="Save.cpp" />
     <ClCompile Include="SaveState.cpp" />
-    <ClCompile Include="Scyxd6Object.cpp" />
     <ClCompile Include="SettingState.cpp" />
     <ClCompile Include="SimpleImage.cpp" />
     <ClCompile Include="SimpleDemo.cpp" />
